@@ -18,7 +18,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.hkhatuwal:ToponSdkUPload:6.4.29'
+    implementation 'com.github.hkhatuwal:ToponSdkUPload:6.4.30'
 }
 ```
 
