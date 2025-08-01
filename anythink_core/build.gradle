@@ -1,9 +1,14 @@
-apply plugin: 'com.android.library'
-apply plugin: 'maven-publish'
-
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+}
 android {
     namespace "com.anythink.core"
     compileSdkVersion 34
+     compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 publishing {
@@ -12,7 +17,7 @@ publishing {
             groupId = 'com.anythink'
             artifactId = 'core'
             version = '6.4.27'
-            artifact(file("libs/core-6.4.27.aar"))
+            artifact(file("core-6.4.27.aar"))
         }
     }
 }
