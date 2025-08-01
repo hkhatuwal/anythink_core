@@ -1,0 +1,18 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+android {
+    namespace "com.anythink.core"
+    compileSdkVersion 34
+}
+
+publishing {
+    publications {
+        aar(MavenPublication) {
+            groupId = 'com.anythink'
+            artifactId = 'core'
+            version = '6.4.27'
+            artifact(file("libs/core-6.4.27.aar"))
+        }
+    }
+}
