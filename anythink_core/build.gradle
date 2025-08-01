@@ -11,13 +11,38 @@ android {
     }
 }
 
-publishing {
-    publications {
-        aar(MavenPublication) {
-            groupId = 'com.anythink'
-            artifactId = 'core'
-            version = '6.4.27'
-            artifact(file("core-6.4.27.aar"))
+// Configure publishing for JitPack compatibility
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                
+                groupId = project.hasProperty('GROUP') ? project.property('GROUP') : 'com.github.hkhatuwal'
+                artifactId = project.hasProperty('POM_ARTIFACT_ID') ? project.property('POM_ARTIFACT_ID') : 'ToponSdkUPload'
+                version = project.hasProperty('VERSION_NAME') ? project.property('VERSION_NAME') : '6.4.29'
+                
+                // Add POM information
+                pom {
+                    name = 'AnyThink Core'
+                    description = 'AnyThink Core SDK'
+                    url = 'https://github.com/hkhatuwal/ToponSdkUPload'
+                    
+                    licenses {
+                        license {
+                            name = 'The Apache License, Version 2.0'
+                            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+                    
+                    developers {
+                        developer {
+                            id = 'hkhatuwal'
+                            name = 'Himanshu Khatuwal'
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -1,4 +1,18 @@
 jdk:
   - openjdk11
+
 before_install:
-  - echo "Using Java 11 for build"
+  - ./gradlew clean
+
+install:
+  - ./gradlew -x test build
+
+before_script:
+  - ./gradlew clean
+
+script:
+  - ./gradlew publishToMavenLocal
+
+# Clear Gradle cache to avoid lint-model issues
+after_script:
+  - rm -rf ~/.gradle/caches/

@@ -14,3 +14,6 @@ allprojects {
         mavenCentral()
     }
 }
+
+// Add maven-publish plugin to root project
+apply plugin: 'maven-publish'
