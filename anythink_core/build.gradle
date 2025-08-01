@@ -20,7 +20,7 @@ afterEvaluate {
                 
                 groupId = project.hasProperty('GROUP') ? project.property('GROUP') : 'com.github.hkhatuwal'
                 artifactId = project.hasProperty('POM_ARTIFACT_ID') ? project.property('POM_ARTIFACT_ID') : 'ToponSdkUPload'
-                version = project.hasProperty('VERSION_NAME') ? project.property('VERSION_NAME') : '6.4.29'
+                version = project.hasProperty('VERSION_NAME') ? project.property('VERSION_NAME') : '6.4.30'
                 
                 // Add POM information
                 pom {
