@@ -4,7 +4,7 @@ plugins {
 }
 android {
     namespace "com.anythink.core"
-    compileSdkVersion 34
+    compileSdkVersion 33
      compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8

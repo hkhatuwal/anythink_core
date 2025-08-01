@@ -1,5 +1,5 @@
 jdk:
-  - openjdk11
+  - openjdk17
 
 before_install:
   - chmod +x ./gradlew
@@ -17,3 +17,7 @@ script:
 # Clear Gradle cache to avoid lint-model issues
 after_script:
   - rm -rf ~/.gradle/caches/
+
+# Environment variables for better compatibility
+env:
+  - JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
