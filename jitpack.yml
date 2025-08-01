@@ -1,0 +1,4 @@
+jdk:
+  - openjdk11
+before_install:
+  - echo "Using Java 11 for build"
